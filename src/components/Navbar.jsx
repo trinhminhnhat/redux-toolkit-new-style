@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 
-import { todoSelector } from '../store/reducers/todoReducer';
+import { todoSelector } from '../store/reducers/todoSlice';
 
 const Navbar = () => {
     const todos = useSelector(todoSelector);
