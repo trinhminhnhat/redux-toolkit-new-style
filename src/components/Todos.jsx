@@ -1,12 +1,17 @@
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
-import { todoSelector, markComplete, deleteTodo } from '../store/reducers/todoSlice';
+import { todoSelector, markComplete, deleteTodo, getTodos } from '../store/reducers/todoSlice';
 import TodoForm from './TodoForm';
 
 const Todos = () => {
     const dispatch = useDispatch();
     const todos = useSelector(todoSelector);
+
+    useEffect(() => {
+        dispatch(getTodos());
+    }, [dispatch]);
 
     return (
         <div className="todo-list">

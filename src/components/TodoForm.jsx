@@ -18,7 +18,7 @@ const TodoForm = () => {
                 completed: false,
             };
             // dispatch(addTodo(newTodo));
-            dispatch(addTodo2(newTodo));
+            dispatch(addTodo(newTodo));
             setTitle('');
         }
     };
