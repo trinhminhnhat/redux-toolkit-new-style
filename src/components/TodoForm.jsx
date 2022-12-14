@@ -2,6 +2,7 @@ import { nanoid } from '@reduxjs/toolkit';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
+// eslint-disable-next-line no-unused-vars
 import { addTodo, addTodo2 } from '../store/reducers/todoSlice';
 
 const TodoForm = () => {
